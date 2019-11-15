@@ -1,0 +1,11 @@
+{%extends 'masterit/base.html'%}{%block content%}
+<h2>{{subject.name}}</h2>
+<ul>
+    {% for subject2 in subject.subject2s.all %}
+    <li>
+      <a href='{%url "subject2_detail" pk=subject2.pk%}'>{{subject2.name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+{%endblock%}

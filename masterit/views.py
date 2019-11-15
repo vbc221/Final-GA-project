@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Category,Subject,Subject2,Help
 from .forms import Subject2Form,HelpForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def category_list(request):
@@ -28,6 +29,7 @@ def help_detail(request,pk):
     help=Help.objects.get(id=pk)
     return render(request,'masterit/help_detail.html',{'help':help})
 
+@login_required
 def subject2_create(request):
     if request.method == 'POST':
         form = Subject2Form(request.POST)
@@ -38,6 +40,7 @@ def subject2_create(request):
         form = Subject2Form()
     return render(request, 'masterit/subject2_form.html', {'form': form})
 
+@login_required
 def help_create(request):
     if request.method == 'POST':
         form = HelpForm(request.POST)

@@ -12,12 +12,11 @@
   <nav>
     <a href='/'><h1>MASTERIT</h1></a>
     <a href='#'>Browse</a>
-    <a href='#'>Become a Teacher</a>
     <a href='/helps'>Request Board</a>
+    <a href='{% url "subject2_create"%}'>Post Your Teaching Service</a>
+    <a href='{% url "help_create"%}'>Post Your Request</a>
     <div class="user-info">
         {% if user.is_authenticated %} 
-        <a href='{% url "subject2_create"%}'>Post Your Teaching Service</a>
-        <a href='{% url "help_create"%}'>Post Your Request</a>
         <a href="{% url 'logout' %}">Log out</a>
         Welcome, {{ user.username }}
         {% else %}

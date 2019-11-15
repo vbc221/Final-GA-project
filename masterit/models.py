@@ -18,6 +18,8 @@ class Subject2(models.Model):
     name=models.CharField(max_length=100)
     subject=models.ForeignKey(Subject,on_delete=models.CASCADE,related_name='subject2s')
     teacher=models.CharField(max_length=100, default='name')
+    experience=models.TextField(default='College degree')
+    photo_url=models.TextField(default='image')
     
     def __str__(self):
         return self.name
@@ -25,7 +27,7 @@ class Subject2(models.Model):
 class Help(models.Model):
     name=models.CharField(max_length=100)
     subject_name=models.CharField(max_length=100)
-    body=models.CharField(max_length=300)
+    body=models.TextField()
 
     def __str__(self):
         return self.subject_name 

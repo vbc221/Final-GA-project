@@ -15,9 +15,9 @@ class Subject(models.Model):
         return self.name 
 
 class Subject2(models.Model):
-    name=models.CharField(max_length=100)
+    what_you_are_teaching=models.CharField(max_length=100)
     subject=models.ForeignKey(Subject,on_delete=models.CASCADE,related_name='subject2s')
-    teacher=models.CharField(max_length=100, default='name')
+    your_name=models.CharField(max_length=100, default='name')
     experience=models.TextField(default='College degree')
     photo_url=models.TextField(default='image')
     

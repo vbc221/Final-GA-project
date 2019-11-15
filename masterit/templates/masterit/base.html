@@ -1,4 +1,4 @@
-{%load staticfiles%}
+{% load staticfiles%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel='stylesheet' href='{% static "css/masterit.css"%}'>
+  <link rel='stylesheet' href='{% static "css/masterit.css"%}'/>
 </head>
 <body>
   <nav>
@@ -15,14 +15,16 @@
     <a href='#'>Become a Teacher</a>
     <a href='/helps'>Request Board</a>
     <div class="user-info">
-        {% if user.is_authenticated %} Welcome, {{ user.username }}
+        {% if user.is_authenticated %} 
+        <a href='{% url "subject2_create"%}'>Post Your Teaching Service</a>
+        <a href='{% url "help_create"%}'>Post Your Request</a>
         <a href="{% url 'logout' %}">Log out</a>
+        Welcome, {{ user.username }}
         {% else %}
         <a href="{% url 'login' %}">Login</a>
         <a href="{% url 'signup' %}">Signup</a>
         {% endif %}
       </div>
-    <a href='#'>Join</a>
   </nav>
   {%block content%} {% endblock%}
 </body>

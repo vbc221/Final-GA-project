@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Category,Subject,Subject2,Help
+from .forms import Subject2Form,HelpForm
 # Create your views here.
 
 def category_list(request):
@@ -26,3 +27,23 @@ def help_list(request):
 def help_detail(request,pk):
     help=Help.objects.get(id=pk)
     return render(request,'masterit/help_detail.html',{'help':help})
+
+def subject2_create(request):
+    if request.method == 'POST':
+        form = Subject2Form(request.POST)
+        if form.is_valid():
+            subject2 = form.save()
+            return redirect('subject2_detail', pk=subject2.pk)
+    else:
+        form = Subject2Form()
+    return render(request, 'masterit/subject2_form.html', {'form': form})
+
+def help_create(request):
+    if request.method == 'POST':
+        form = HelpForm(request.POST)
+        if form.is_valid():
+            help = form.save()
+            return redirect('help_detail', pk=help.pk)
+    else:
+        form = HelpForm()
+    return render(request, 'masterit/help_form.html', {'form': form})

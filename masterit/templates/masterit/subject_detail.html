@@ -4,8 +4,8 @@
     {% for subject2 in subject.subject2s.all %}
     <li>
       <h3>{{subject2.photo_url}}</h3>
-      <h4>{{subject2.teacher}}</h4>
-      <a href='{%url "subject2_detail" pk=subject2.pk%}'>{{subject2.name}}</a>
+      <h4>{{subject2.your_name}}</h4>
+      <a href='{%url "subject2_detail" pk=subject2.pk%}'>{{subject2.what_you_are_teaching}}</a>
     </li>
     {% endfor %}
   </ul>

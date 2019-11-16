@@ -1,5 +1,6 @@
 {%extends 'masterit/base.html'%}{%block content%}
 <h2>{{subject.name}}</h2>
+<h3><a href='{% url "subject2_create"%}'>(Add your Teaching Service)</a></h3>
 <ul>
     {% for subject2 in subject.subject2s.all %}
     <li>

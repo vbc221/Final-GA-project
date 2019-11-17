@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Category,Subject,Subject2,Help
 from .forms import Subject2Form,HelpForm
 from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -36,7 +37,7 @@ def help_detail(request,pk):
 @login_required
 def subject2_create(request):
     if request.method == 'POST':
-        form = Subject2Form(request.POST)
+        form = Subject2Form(request.POST,request.FILES)
         if form.is_valid():
             subject2 = form.save()
             return redirect('subject2_detail', pk=subject2.pk)
@@ -48,7 +49,7 @@ def subject2_create(request):
 def subject2_edit(request,pk):
     subject2=Subject2.objects.get(pk=pk)
     if request.method == 'POST':
-        form = Subject2Form(request.POST, instance=subject2)
+        form = Subject2Form(request.POST,request.FILES, instance=subject2)
         if form.is_valid():
             subject2 = form.save()
             return redirect('subject2_detail', pk=subject2.pk)

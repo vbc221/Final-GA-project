@@ -19,10 +19,10 @@ class Subject2(models.Model):
     subject=models.ForeignKey(Subject,on_delete=models.CASCADE,related_name='subject2s')
     your_name=models.CharField(max_length=100, default='your name')
     experience=models.TextField(default='College degree')
-    photo_url=models.TextField(default='image')
+    photo=models.ImageField(upload_to='images/', default='blank')
     
     def __str__(self):
-        return self.name
+        return self.what_you_are_teaching
 
 class Help(models.Model):
     name=models.CharField(max_length=100)

@@ -1,6 +1,6 @@
 {%extends 'masterit/base.html'%}{%block content%}
 <h2>{{help.subject_name}}</h2>
 <h4><a href='{% url "help_edit" pk=help.pk%}'>(EDIT)</a> <a href='{% url "help_delete" pk=help.pk%}'>(DELETE)</a> </h4>
-<h3>{{help.name}}</h3>
+<h3>{{help.author}}</h3>
 <h3>{{help.body}}</h3>
 {%endblock%}

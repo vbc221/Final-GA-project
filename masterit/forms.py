@@ -5,7 +5,7 @@ class Subject2Form(forms.ModelForm):
 
     class Meta:
         model = Subject2
-        fields = ('what_you_are_teaching', 'subject', 'your_name','experience','photo',)
+        fields = ('what_you_are_teaching', 'subject', 'author','experience','photo','date_posted',)
 
 class HelpForm(forms.ModelForm):
 

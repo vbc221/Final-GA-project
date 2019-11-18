@@ -39,28 +39,38 @@ def subject2_create(request):
     if request.method == 'POST':
         form = Subject2Form(request.POST,request.FILES)
         if form.is_valid():
+            form.instance.author=request.user
             subject2 = form.save()
             return redirect('subject2_detail', pk=subject2.pk)
     else:
         form = Subject2Form()
     return render(request, 'masterit/subject2_form.html', {'form': form})
 
+
 @login_required
 def subject2_edit(request,pk):
     subject2=Subject2.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = Subject2Form(request.POST,request.FILES, instance=subject2)
-        if form.is_valid():
-            subject2 = form.save()
-            return redirect('subject2_detail', pk=subject2.pk)
+    if request.user==subject2.author:
+            if request.method == 'POST':
+                form = Subject2Form(request.POST,request.FILES, instance=subject2)
+                if form.is_valid():
+                    form.instance.author=request.user
+                    subject2 = form.save()
+                    return redirect('subject2_detail', pk=subject2.pk)
+            else:
+                form = Subject2Form(instance=subject2)
+            return render(request, 'masterit/subject2_form.html', {'form': form})
     else:
-        form = Subject2Form(instance=subject2)
-    return render(request, 'masterit/subject2_form.html', {'form': form})
+        return redirect('category_list')
 
 @login_required
 def subject2_delete(request,pk):
-    Subject2.objects.get(id=pk).delete()
-    return redirect('category_list')
+    subject2=Subject2.objects.get(pk=pk)
+    if request.user==subject2.author:
+            subject2.delete()
+            return redirect('category_list')
+    else:
+        return redirect('category_list')
 
 @login_required
 def help_create(request):

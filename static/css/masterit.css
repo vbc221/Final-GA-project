@@ -1,0 +1,91 @@
+* {
+  list-style: none;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body .background {
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 62%, 28% 89%, 0 100%, 0 0);
+          clip-path: polygon(50% 0%, 100% 0, 100% 62%, 28% 89%, 0 100%, 0 0);
+  background-color: #d4ebf2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainNav li {
+  display: inline-block;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 18px;
+}
+
+/* page title */
+.logo {
+  float: left;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 30%;
+}
+
+nav {
+  padding: 10px;
+}
+
+.navLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.navLinks:hover {
+  color: #b3b3b3;
+}
+
+.navBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #d4ebf2;
+}
+
+.info {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.categoryB {
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 62%, 28% 89%, 0 100%, 0 0);
+          clip-path: polygon(50% 0%, 100% 0, 100% 62%, 28% 89%, 0 100%, 0 0);
+  background-color: #d4ebf2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+/*# sourceMappingURL=masterit.css.map */

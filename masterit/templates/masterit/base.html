@@ -9,22 +9,27 @@
   <link rel='stylesheet' href='{% static "css/masterit.css"%}'/>
 </head>
 <body>
-  <nav>
-    <a href='/'><h1>MASTERIT</h1></a>
-    <a href='/category'>Browse</a>
-    <a href='/helps'>Request Board</a>
-    <a href='{% url "subject2_create"%}'>Post Your Teaching Service</a>
-    <a href='{% url "help_create"%}'>Post Your Request</a>
-    <div class="user-info">
+  <div class='navBox'>
+    <div>
+      <a href='/'><img src='../../static/images/logo.png'></a>
+    </div>
+    <nav class='mainNav'>
+      <ul>
+        <li><a class='navLinks' href='/category'>Browse</a></li>
+        <li><a class='navLinks' href='/helps'>Request Board</a></li>
+        <li><a class='navLinks' href='{% url "subject2_create"%}'>Post Your Teaching Service</a></li>
+        <li><a class='navLinks' href='{% url "help_create"%}'>Post Your Request</a></li>
         {% if user.is_authenticated %} 
-        <a href="{% url 'logout' %}">Log out</a>
-        Welcome, {{ user.username }}
+        <li><a class='navLinks' href="{% url 'logout' %}">Log out</a></li>
+        <li>Welcome, {{ user.username }}</li>
         {% else %}
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'signup' %}">Signup</a>
+        <li><a class='navLinks' href="{% url 'login' %}">Login</a></li> 
+        <li><a class='navLinks' href="{% url 'signup' %}">Signup</a></li>
         {% endif %}
-      </div>
-  </nav>
-  {%block content%} {% endblock%}
+      </ul>
+    </nav>
+  </div>
+  <div class='background'></div>
+    {%block content%} {% endblock%}
 </body>
 </html>

@@ -1,7 +1,11 @@
 {% extends 'masterit/base.html' %} {% block content %}
-<h1>What do you need help with?</h1>
-<form method="POST">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Submit</button>
-</form>
+
+
+  <h1>What do you need help with?</h1>
+  <form method="POST">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Submit</button>
+  </form>  
+
+
 {% endblock %}

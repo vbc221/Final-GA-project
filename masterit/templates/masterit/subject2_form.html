@@ -1,7 +1,10 @@
 {% extends 'masterit/base.html' %} {% block content %}
-<h1>New Teacher</h1>
-<form method="POST" enctype="multipart/form-data">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Submit</button>
-</form>
+  <div>
+    <h1>New Teacher</h1>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit" class="save btn btn-default">Submit</button>
+    </form>
+  </div>
+
 {% endblock %}

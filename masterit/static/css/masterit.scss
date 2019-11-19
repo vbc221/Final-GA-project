@@ -153,7 +153,7 @@ h2{
 }
 
 .subject2Inner img{
-  margin:10px 0;
+  margin:20px 0;
 }
 
 .subject2Inner a{
@@ -211,4 +211,13 @@ h2{
 .subjectWrap{
   display:flex;
   flex-direction: row;
+  flex-flow:row wrap;
+}
+
+.subjectBox a{
+  color:black;
+}
+
+.subjectBox a:hover{
+  color: color(primary-light)
 }

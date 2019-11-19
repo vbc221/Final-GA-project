@@ -152,7 +152,7 @@ h2 {
 }
 
 .subject2Inner img {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .subject2Inner a {
@@ -211,5 +211,15 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+.subjectBox a {
+  color: black;
+}
+
+.subjectBox a:hover {
+  color: #b3b3b3;
 }
 /*# sourceMappingURL=masterit.css.map */

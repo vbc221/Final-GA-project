@@ -3,11 +3,11 @@
 Created an application where people can look for tutors based on whatever school subject they need help with. Also implemented a help forum where people can post about things they need help on. 
 
 ## Wireframe:
-![](https://github.com/vbc221/Vincent-Chen-Recipe-App/blob/master/assets/images/IMG_4525%20(1).jpg)
-![](https://github.com/vbc221/Vincent-Chen-Recipe-App/blob/master/assets/images/IMG_4522.jpg)
+![](https://github.com/vbc221/Final-GA-project/blob/master/media/images/IMG_4544.jpg)
+![](https://github.com/vbc221/Final-GA-project/blob/master/media/images/IMG_4545.jpg)
 
 ## Brief Example:
-![](https://github.com/vbc221/Vincent-Chen-Recipe-App/blob/master/assets/images/Screen%20Shot%202019-10-15%20at%208.54.39%20PM.png)
+![](https://github.com/vbc221/Final-GA-project/blob/master/media/images/Screen_Shot_2019-11-18_at_5.28.40_PM_2jRVZDr.png)
 ## List of Features / User Stories
 For the project I planned to be able to:
 * Full CRUD functionality

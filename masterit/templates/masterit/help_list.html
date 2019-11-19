@@ -1,10 +1,10 @@
 {%extends 'masterit/base.html'%}{%block content%}
 
-<div>
-  <h2>Requests </h2>
+<div class='categoryListBox'>
   <ul>
+    <li><h2>Requests </h2></li>
     {% for help in helps %}
-    <li>
+    <li class='categoryList'>
       <a href='{% url "help_detail" pk=help.pk%}'>{{ help.subject_name }}</a>
     </li>
     {% endfor %}

@@ -1,9 +1,10 @@
 {%extends 'masterit/base.html'%}{%block content%}
   <div class='categoryBox'>
-    <h2>{{category.name}}</h2>
+    
     <ul>
+      <li><h2>{{category.name}}</h2></li>
       {% for subject in category.subjects.all %}
-      <li>
+      <li class='categoryListDetail'>
         <a href='{% url "subject_detail" pk=subject.pk%}'>{{subject.name}}</a>
       </li>
       {% endfor %}

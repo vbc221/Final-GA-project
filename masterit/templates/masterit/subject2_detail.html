@@ -1,9 +1,13 @@
 {%extends 'masterit/base.html'%}{%block content%}
-<div>
-  <h2>{{subject2.what_you_are_teaching}}</h2>
-  <img src='{{subject2.photo.url}}' alt='{{subject2.what_you_are_teaching}}' width='700'>
-  <h3> By: {{subject2.author}}</h3>
-  <h3>Experience:<br><br> {{subject2.experience}}</h3>
-  <h4><a href='{% url "subject2_edit" pk=subject2.pk%}'>(EDIT)</a> <a href='{% url "subject2_delete" pk=subject2.pk %}'>(DELETE)</a></h4>
+<div class='subject2Box'>
+  <div class='subject2Inner'>
+    <h2>{{subject2.what_you_are_teaching}}</h2>
+    <img src='{{subject2.photo.url}}' alt='{{subject2.what_you_are_teaching}}' width='300'>
+    <h3> By: {{subject2.author}}</h3>
+    <br>
+    <h3>Experience:<br><br> {{subject2.experience}}</h3>
+    <br>
+    <h4><a href='{% url "subject2_edit" pk=subject2.pk%}'>(EDIT)</a> <a href='{% url "subject2_delete" pk=subject2.pk %}'>(DELETE)</a></h4>
+  </div>
 </div>
 {%endblock%}

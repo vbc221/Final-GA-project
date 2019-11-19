@@ -91,6 +91,7 @@ nav {
 
 h2 {
   text-align: center;
+  text-decoration: underline;
 }
 
 .categoryList {
@@ -98,11 +99,117 @@ h2 {
   text-align: center;
 }
 
+.categoryList a {
+  color: black;
+}
+
+.categoryList a:hover {
+  color: #b3b3b3;
+}
+
+.categoryListDetail {
+  margin: 10px;
+  text-align: center;
+}
+
+.categoryListDetail a {
+  color: black;
+}
+
+.categoryListDetail a:hover {
+  color: #b3b3b3;
+}
+
 .categoryBox {
   border: 1px solid black;
+  margin: 0 250px;
+  padding: 10px 0;
+  border-radius: 4%;
 }
 
 .categoryListBox {
   border: 1px solid black;
+  margin: 0 250px;
+  padding: 10px 0;
+  border-radius: 4%;
+}
+
+.info h2 {
+  text-decoration: none;
+}
+
+.subject2Box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subject2Inner {
+  text-align: center;
+}
+
+.subject2Inner img {
+  margin: 10px 0;
+}
+
+.subject2Inner a {
+  color: black;
+}
+
+.subject2Inner a:hover {
+  color: #b3b3b3;
+}
+
+.subjectBox {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.subjectBox h3, .subjectBox h4 {
+  margin: 10px 0;
+}
+
+.subjectBox img {
+  width: 50%;
+}
+
+.helpBox {
+  border: 1px solid black;
+  margin: 0 100px;
+  padding: 10px 0;
+  border-radius: 4%;
+  text-align: center;
+}
+
+.helpBox a {
+  color: black;
+}
+
+.helpBox a:hover {
+  color: #b3b3b3;
+}
+
+.helpBox h2, h3 {
+  margin: 10px 0;
+}
+
+.subjectWrapper {
+  margin: 10px;
+  border: 1px solid black;
+  width: 20%;
+  padding: 10px 0;
+}
+
+.subjectWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*# sourceMappingURL=masterit.css.map */

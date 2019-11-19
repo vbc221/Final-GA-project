@@ -2,7 +2,7 @@
   <div class='categoryListBox'>
     
     <ul>
-      <li><h2>Categories </h2></li>
+      <li><h2>Categories</h2></li>
       {% for category in categories %}
       <li class='categoryList'>
         <a href="{% url 'category_detail' pk=category.pk %}">{{ category.name }}</a>

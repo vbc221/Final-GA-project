@@ -1,16 +1,20 @@
 {%extends 'masterit/base.html'%}{%block content%}
-<div>
-  <h2>{{subject.name}}</h2>
-  <h3><a href='{% url "subject2_create"%}'>(Add your Teaching Service)</a></h3>
-  <ul>
-      {% for subject2 in subject.subject2s.all %}
-      <li>
-        <img src='{{subject2.photo.url}}' alt='{{subject2.what_you_are_teaching}}' width='300'>
-        <h4>{{subject2.author}}</h4>
-        <a href='{%url "subject2_detail" pk=subject2.pk%}'>{{subject2.what_you_are_teaching}}</a>
-      </li>
-      {% endfor %}
-    </ul>  
+<div class='subjectBox'>
+    <ul>
+      <li><h2>{{subject.name}}</h2></li>
+      <li> <h3><a href='{% url "subject2_create"%}'>(Add your Teaching Service)</a></h3></li>
+      <div class='subjectWrap'>
+        {% for subject2 in subject.subject2s.all %}
+        <li class='subjectWrapper'>
+          <img src='{{subject2.photo.url}}' alt='{{subject2.what_you_are_teaching}}' width='300'>
+          <h4>{{subject2.author}}</h4>
+          <a href='{%url "subject2_detail" pk=subject2.pk%}'>{{subject2.what_you_are_teaching}}</a>
+        </li>
+        {% endfor %}
+      </div>
+        
+      </ul>  
+  
   </div>
 
 {%endblock%}

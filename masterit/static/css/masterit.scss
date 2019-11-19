@@ -235,13 +235,6 @@ h2{
 }
 
 
-.helpButton{
-  display:flex;
-  justify-content: center;
-  margin:20px 0;
-  width:50px;
-}
-
 .helpFormBox{
   border:1px solid black;
   margin:0 300px;
@@ -251,6 +244,24 @@ h2{
 .logOutBox{
   border:1px solid black;
   margin:0 300px;
+}
+
+.helpButton{
+  display:flex;
+  justify-content: center;
+}
+
+input{
+  width:300px;
+  margin:10px 0;
+}
+
+textarea{
+  margin:10px 0;
+  width:350px;
+}
+.helpButton button, .helpButton input{
+  margin:20px 0;
 }
 
 

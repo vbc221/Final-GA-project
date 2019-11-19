@@ -1,10 +1,16 @@
 {% extends "masterit/base.html" %} {% block content %}
-
-<form method="post" action="{% url 'signup' %}">
+<div class='helpFormBox'>
+  <h2>Sign Up</h2>
+  <div class='helpForm'>
+    <form method="post" action="{% url 'signup' %}">
   {% csrf_token %} {{form.as_p}}
+  <div class='helpButton'>
+    <input type="submit" value="Sign Up" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </div>
+  </form>
+  </div>
+</div>
 
-  <input type="submit" value="Sign Up" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
 
 {% endblock %}

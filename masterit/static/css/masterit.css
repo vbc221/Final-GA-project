@@ -222,4 +222,34 @@ h2 {
 .subjectBox a:hover {
   color: #b3b3b3;
 }
+
+.helpForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+.helpFormBox h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.helpButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.helpFormBox {
+  border: 1px solid black;
+  margin: 0 300px;
+}
 /*# sourceMappingURL=masterit.css.map */

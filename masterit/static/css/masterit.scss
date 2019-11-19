@@ -221,3 +221,28 @@ h2{
 .subjectBox a:hover{
   color: color(primary-light)
 }
+
+.helpForm{
+  display:flex;
+  justify-content: center;
+  margin:10px 0;
+}
+
+
+.helpFormBox h1{
+  text-align: center;
+  margin:20px 0;
+}
+
+
+
+.helpButton{
+  display:flex;
+  justify-content: center;
+  margin:20px 0;
+}
+
+.helpFormBox{
+  border:1px solid black;
+  margin:0 300px;
+}

@@ -1,10 +1,13 @@
 {% extends 'masterit/base.html' %} {% block content %}
-  <div>
+  <div class='helpFormBox'>
     <h1>New Teacher</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <div class='helpForm'>
+      <form method="POST" enctype="multipart/form-data">
       {% csrf_token %} {{ form.as_p }}
-      <button type="submit" class="save btn btn-default">Submit</button>
+      <div class='helpButton'>
+        <button type="submit" class="save btn btn-default">Submit</button>
+      </div>
     </form>
+    </div>
   </div>
-
 {% endblock %}

@@ -1,16 +1,24 @@
 <!-- accounts/templates/accounts/login.html -->
-{% extends 'masterit/base.html' %} {% block content %} {% if form.errors %}
-<p>Your username and password do not match. Please try again.</p>
-{% endif %}
-   {% if next %}
-        <p>Please login to see this page.</p>
-   {% endif %}
+{% extends 'masterit/base.html' %} {% block content %} 
+<div class='helpFormBox'>
+  <h1>Login Page</h1>
+  {% if form.errors %}
+    <h2>Your username and password do not match. Please try again.</h2>
+    {% endif %}
+      {% if next %}
+            <h2>Please login to see this page.</h2>
+      {% endif %}
+  <div class='helpForm'>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %} {{form.as_p}}
+    <div class='helpButton'>
+      <input type="submit" value="login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
+    </form>
+  </div>
+   
+</div>
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{form.as_p}}
-
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
 
 {% endblock %}

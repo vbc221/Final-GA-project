@@ -246,10 +246,20 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px 0;
+  width: 50px;
 }
 
 .helpFormBox {
   border: 1px solid black;
   margin: 0 300px;
+}
+
+.logOutBox {
+  border: 1px solid black;
+  margin: 0 300px;
+}
+
+.helpForm h3 {
+  color: black;
 }
 /*# sourceMappingURL=masterit.css.map */

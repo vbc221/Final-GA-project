@@ -26,7 +26,7 @@ Clone it down
 Next npm install to make sure you have everything on your local file.
 
 ## Website:
-
+https://masteritapp.herokuapp.com/
 
 ## Issues throughout the process:
 The big thing for me was that even though I did have a wireframe and a general idea of how it was going to look, I wasn't sure about the number of models I would need. I think having a better idea of everything before would have been good. Also had some slight issues on posting an image. I could make it on the admin side but not on the user forms. This was because I was missing a request.files. 

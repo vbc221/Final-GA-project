@@ -1,1 +1,1 @@
-web: gunicorn masterit.wsgi --log-file -
+web: gunicorn masterit_django.wsgi --log-file -

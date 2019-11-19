@@ -1,0 +1,1 @@
+web: gunicorn masterit.wsgi --log-file -

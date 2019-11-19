@@ -50,7 +50,7 @@ def subject2_create(request):
 @login_required
 def subject2_edit(request,pk):
     subject2=Subject2.objects.get(pk=pk)
-    if request.user==subject2.author:
+    if request.user==subject2.author or request.user.is_superuser:
             if request.method == 'POST':
                 form = Subject2Form(request.POST,request.FILES, instance=subject2)
                 if form.is_valid():
@@ -66,7 +66,7 @@ def subject2_edit(request,pk):
 @login_required
 def subject2_delete(request,pk):
     subject2=Subject2.objects.get(pk=pk)
-    if request.user==subject2.author:
+    if request.user==subject2.author or request.user.is_superuser:
             subject2.delete()
             return redirect('category_list')
     else:
